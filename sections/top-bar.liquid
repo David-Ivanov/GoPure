@@ -1,0 +1,39 @@
+{{'section-top-bar.css' |  asset_url | stylesheet_tag}}
+
+{% style %}
+    .top-bar-main-box {
+        background-color: {{ section.settings.color_scheme.settings.secondary_accent }};
+    }
+    .top-bar-text {
+        color: {{ section.settings.color_scheme.settings.background }};
+    }
+{% endstyle %}
+
+<div class="top-bar-main-box">
+    <p class="top-bar-text">{{ section.settings.text }}</p>
+</div>
+
+{% schema %}
+{
+    "name": "top-bar",
+    "settings": [
+        {
+            "type": "color_scheme",
+            "id": "color_scheme",
+            "label": "Color scheme",
+            "default": "scheme-6"
+        },
+        {
+            "type": "text",
+            "id": "text",
+            "label": "Text",
+            "default": "Welcome"
+        }
+        ],
+        "presets": [
+            {
+                "name": "Top bar"
+            }
+        ]
+}
+{% endschema %}
