@@ -1,0 +1,20 @@
+{{ 'component-main-btn.css' |  asset_url | stylesheet_tag }}
+
+{% style %}
+    .main-btn {
+        margin-bottom: {{ section.settings.btn_margin }}px;
+        background-color: {{ section.settings.color_scheme.settings.secondary_accent }}
+    }
+
+    .main-btn {
+        color: {{ section.settings.color_scheme.settings.button_label }}
+    }
+{% endstyle %}
+
+<a class="main-btn" href="{{ section.settings.btn_link }}">
+    <p class="main-btn-text">{{ section.settings.btn_text }}</p>
+    
+    {% if section.settings.btn_arrow %}
+        {% render 'icon-arrow' %}
+    {% endif %}
+</a>

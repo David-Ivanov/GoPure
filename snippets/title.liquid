@@ -1,0 +1,21 @@
+{{ 'component-title.css' |  asset_url |  stylesheet_tag }}
+
+{% style %}
+    .title {
+        margin-bottom: {{ section.settings.title_margin }}px;
+        color: {{ section.settings.title_color }};
+        font-size: {{ section.settings.title_font_size }}px;
+    }
+{% endstyle %}
+
+<{{ section.settings.title_h }} class="title">
+
+    {%- if section.settings.title_uppercase -%}
+    
+    {{ section.settings.title | upcase }}
+    
+    {%- else -%}
+    {{ section.settings.title }}
+    {%- endif- %}
+ 
+ </{{ section.settings.title_h }}>

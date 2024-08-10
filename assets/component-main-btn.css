@@ -1,0 +1,32 @@
+.main-btn {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 270px;
+    height: 62px;
+
+    padding: 0;
+
+    text-decoration: none;
+
+    border-radius: 42px;
+    border: none;
+}
+
+.main-btn:hover {
+    opacity: 0.7;
+}
+
+.main-btn-text {
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1.75;
+}
+
+.main-btn svg {
+    position: absolute;
+    right: 24px;
+}

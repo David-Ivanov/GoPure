@@ -1,0 +1,21 @@
+{{ 'component-text.css' | asset_url | stylesheet_tag }}
+
+{% style %}
+.text {
+    margin-bottom: {{ section.settings.text_margin }}px;
+    color: {{ section.settings.text_color }};
+    font-size: {{ section.settings.text_font_size }}px;
+    font-weight: {{ section.settings.text_weight }};
+    text-align: {{ section.settings.text_align }};
+}
+{% endstyle %}
+
+<p class="text"> 
+    {%- if section.settings.text_uppercase -%}
+        
+        {{ section.settings.text |  upcase }}
+
+        {%- else -%}
+        {{ section.settings.text }} 
+    {%- endif- %}
+    </p>

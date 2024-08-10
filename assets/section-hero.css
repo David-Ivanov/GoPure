@@ -1,0 +1,16 @@
+.hero-main-box {
+    display: flex;
+    align-items: center;
+
+    height: 765px;
+    box-shadow: inset 0 0 0 1000px rgba(0, 26, 56, 0.30);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+.hero-box {
+    width: 784px;
+    margin-left: 166px;
+}
