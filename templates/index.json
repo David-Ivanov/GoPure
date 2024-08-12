@@ -1,42 +1,27 @@
 {
   "sections": {
-    "image_banner": {
-      "type": "image-banner",
-      "blocks": {
-        "heading": {
-          "type": "heading",
-          "settings": {
-            "heading": "Browse our latest products",
-            "heading_size": "h0"
-          }
-        },
-        "button": {
-          "type": "buttons",
-          "settings": {
-            "button_label_1": "Shop all",
-            "button_link_1": "shopify:\/\/collections\/all",
-            "button_style_secondary_1": true,
-            "button_label_2": "",
-            "button_link_2": "",
-            "button_style_secondary_2": false
-          }
-        }
-      },
-      "block_order": [
-        "heading",
-        "button"
-      ],
+    "hero_aRYVmA": {
+      "type": "hero",
       "settings": {
-        "image_overlay_opacity": 40,
-        "image_height": "large",
-        "desktop_content_position": "bottom-center",
-        "show_text_box": false,
-        "desktop_content_alignment": "center",
-        "color_scheme": "scheme-3",
-        "image_behavior": "none",
-        "mobile_content_alignment": "center",
-        "stack_images_on_mobile": false,
-        "show_text_below": false
+        "color_scheme": "scheme-0233e1b2-39b6-4507-9398-54c83aec48ca",
+        "bg_img": "shopify:\/\/shop_images\/tap_water_pitcher.png",
+        "title": "The Power To Purify Tap Water, Everywhere.Title",
+        "title_color": "#004B83",
+        "title_uppercase": false,
+        "title_margin": 15,
+        "title_font_size": 56,
+        "title_h": "h1",
+        "text": "Say hello to the smallest, most convenient portable water purifier on the planet, ever. Say goodbye to buying disposable plastic water bottles on the go, forever.",
+        "text_color": "#004B83",
+        "text_uppercase": false,
+        "text_margin": 30,
+        "text_font_size": 20,
+        "text_weight": "500",
+        "text_align": "start",
+        "btn_text": "Shop Now",
+        "btn_arrow": true,
+        "btn_link": "\/collections\/all",
+        "btn_margin": 0
       }
     },
     "featured_collection": {
@@ -69,7 +54,7 @@
     }
   },
   "order": [
-    "image_banner",
+    "hero_aRYVmA",
     "featured_collection"
   ]
 }
