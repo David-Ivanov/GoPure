@@ -1,0 +1,58 @@
+{{ 'section-labels.css' |  asset_url | stylesheet_tag }}
+
+{% style %}
+    .labels-main-box {
+        background-color: {{ section.settings.color_scheme.settings.accent }};
+        margin-bottom: {{ section.settings.margin }}px;
+    }
+{% endstyle %}
+
+<div class="labels-main-box">
+    {% for lable in section.blocks %}
+        {% if lable != blank %}
+            {{ lable.settings.img |  image_url: width: nil |  image_tag }}
+        {% endif %}
+    {% endfor %}
+</div>
+
+{% schema %}
+{
+    "name": "labels",
+    "settings": [
+        {
+            "type": "color_scheme",
+            "id": "color_scheme",
+            "label": "Color scheme",
+            "default": "schema-1"
+        },
+        {
+            "type": "range",
+            "id": "margin",
+            "label": "Margin bottom",
+            "max": 100,
+            "min": 0,
+            "step": 5,
+            "default": 0
+        }
+        ],
+        "blocks": [
+            {
+                "type": "lable",
+                "name": "lable",
+                "limit": 6,
+                "settings": [
+                    {
+                        "type": "image_picker",
+                        "id": "img",
+                        "label": "Lable"
+                    }
+                ]
+            }
+        ],
+        "presets": [
+            {
+                "name": "Labels"
+            }
+        ]
+}
+{% endschema %}

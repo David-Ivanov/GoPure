@@ -146,7 +146,7 @@
           "secondary_button_label": "#121212",
           "shadow": "#121212",
           "accent": "#121212",
-          "banner": "#FFFFFF",
+          "banner": "#ffffff",
           "secondary_accent": "#121212",
           "secondary_background": "#121212"
         }
@@ -161,7 +161,7 @@
           "secondary_button_label": "#121212",
           "shadow": "#121212",
           "accent": "#121212",
-          "banner": "#FFFFFF",
+          "banner": "#ffffff",
           "secondary_accent": "#121212",
           "secondary_background": "#121212"
         }
@@ -176,7 +176,7 @@
           "secondary_button_label": "#ffffff",
           "shadow": "#121212",
           "accent": "#121212",
-          "banner": "#FFFFFF",
+          "banner": "#ffffff",
           "secondary_accent": "#121212",
           "secondary_background": "#121212"
         }
@@ -191,7 +191,7 @@
           "secondary_button_label": "#ffffff",
           "shadow": "#121212",
           "accent": "#121212",
-          "banner": "#FFFFFF",
+          "banner": "#ffffff",
           "secondary_accent": "#121212",
           "secondary_background": "#121212"
         }
@@ -206,7 +206,7 @@
           "secondary_button_label": "#ffffff",
           "shadow": "#121212",
           "accent": "#121212",
-          "banner": "#FFFFFF",
+          "banner": "#ffffff",
           "secondary_accent": "#121212",
           "secondary_background": "#121212"
         }
@@ -220,10 +220,10 @@
           "button_label": "#ffffff",
           "secondary_button_label": "#121212",
           "shadow": "#121212",
-          "accent": "#121212",
-          "banner": "#FFFFFF",
-          "secondary_accent": "#121212",
-          "secondary_background": "#121212"
+          "accent": "#004b83",
+          "banner": "#000000",
+          "secondary_accent": "#1675bb",
+          "secondary_background": "#f7f7f7"
         }
       }
     }

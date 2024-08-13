@@ -1,9 +1,19 @@
 {{ 'component-text.css' | asset_url | stylesheet_tag }}
 
+{% capture color %}
+    {% if section.settings.text_color == "secondary_color" %}
+        {{ section.settings.color_scheme.settings.secondary_text }}
+    {% elsif section.settings.text_color == "main_color" %}
+        {{ section.settings.color_scheme.settings.text }}
+    {% elsif section.settings.text_color == "accent_color" %}
+        {{ section.settings.color_scheme.settings.accent }}
+    {% endif %}
+{% endcapture %}
+
 {% style %}
 .text {
     margin-bottom: {{ section.settings.text_margin }}px;
-    color: {{ section.settings.text_color }};
+    color: {{ color }};
     font-size: {{ section.settings.text_font_size }}px;
     font-weight: {{ section.settings.text_weight }};
     text-align: {{ section.settings.text_align }};

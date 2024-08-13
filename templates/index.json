@@ -6,13 +6,13 @@
         "color_scheme": "scheme-0233e1b2-39b6-4507-9398-54c83aec48ca",
         "bg_img": "shopify:\/\/shop_images\/tap_water_pitcher.png",
         "title": "The Power To Purify Tap Water, Everywhere.Title",
-        "title_color": "#004B83",
+        "title_color": "#004b83",
         "title_uppercase": false,
         "title_margin": 15,
         "title_font_size": 56,
         "title_h": "h1",
         "text": "Say hello to the smallest, most convenient portable water purifier on the planet, ever. Say goodbye to buying disposable plastic water bottles on the go, forever.",
-        "text_color": "#004B83",
+        "text_color": "secondary_color",
         "text_uppercase": false,
         "text_margin": 30,
         "text_font_size": 20,
@@ -22,6 +22,59 @@
         "btn_arrow": true,
         "btn_link": "\/collections\/all",
         "btn_margin": 0
+      }
+    },
+    "labels_Xek8qU": {
+      "type": "labels",
+      "blocks": {
+        "lable_jcTXJz": {
+          "type": "lable",
+          "settings": {
+            "img": "shopify:\/\/shop_images\/image_34.png"
+          }
+        },
+        "lable_FDmyzL": {
+          "type": "lable",
+          "settings": {
+            "img": "shopify:\/\/shop_images\/image_35_1.png"
+          }
+        },
+        "lable_AzqjPp": {
+          "type": "lable",
+          "settings": {
+            "img": "shopify:\/\/shop_images\/image_36.png"
+          }
+        },
+        "lable_dgxrRa": {
+          "type": "lable",
+          "settings": {
+            "img": "shopify:\/\/shop_images\/image_37.png"
+          }
+        },
+        "lable_Ng8RjJ": {
+          "type": "lable",
+          "settings": {
+            "img": "shopify:\/\/shop_images\/image_38.png"
+          }
+        },
+        "lable_b73zhy": {
+          "type": "lable",
+          "settings": {
+            "img": "shopify:\/\/shop_images\/image_39.png"
+          }
+        }
+      },
+      "block_order": [
+        "lable_jcTXJz",
+        "lable_FDmyzL",
+        "lable_AzqjPp",
+        "lable_dgxrRa",
+        "lable_Ng8RjJ",
+        "lable_b73zhy"
+      ],
+      "settings": {
+        "color_scheme": "scheme-0233e1b2-39b6-4507-9398-54c83aec48ca",
+        "margin": 60
       }
     },
     "featured_collection": {
@@ -55,6 +108,7 @@
   },
   "order": [
     "hero_aRYVmA",
+    "labels_Xek8qU",
     "featured_collection"
   ]
 }

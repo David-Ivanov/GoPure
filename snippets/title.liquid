@@ -1,9 +1,20 @@
 {{ 'component-title.css' |  asset_url |  stylesheet_tag }}
 
+{% capture color %}
+    {% if section.settings.text_color == "secondary_color" %}
+        {{ section.settings.color_scheme.settings.secondary_text }}
+    {% elsif section.settings.text_color == "main_color" %}
+        {{ section.settings.color_scheme.settings.text }}
+    {% elsif section.settings.text_color == "accent_color" %}
+        {{ section.settings.color_scheme.settings.accent }}
+{% endif %}
+
+{% endcapture %}
+
 {% style %}
     .title {
         margin-bottom: {{ section.settings.title_margin }}px;
-        color: {{ section.settings.title_color }};
+        color: {{ color }};
         font-size: {{ section.settings.title_font_size }}px;
     }
 {% endstyle %}
