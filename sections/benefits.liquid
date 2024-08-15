@@ -1,0 +1,118 @@
+{{ 'section-benefits.css' |  asset_url |  stylesheet_tag }}
+
+{% style %}
+    .benefits {
+        margin-bottom: {{ section.settings.margin }}px;
+    }
+    .benefits-title {
+        margin-bottom: {{ section.settings.title_margin }}px;
+        color: {{ section.settings.color_scheme.settings.accent }};
+
+    }
+    .benefits-main-box {
+        background-color: {{ section.settings.color_scheme.settings.secondary_accent }};
+        background-image: url("{{ 'benefits-bg.png' |  asset_img_url: 'master' }}");
+    }
+
+    .benefits-subtitle {
+        color: {{ section.settings.color_scheme.settings.secondary_text }};
+    }
+
+    .benefits-text {
+        color: {{ section.settings.color_scheme.settings.secondary_text }};
+    }
+{% endstyle %}
+
+<h2 class="benefits-title">{{ section.settings.title }}</h2>
+
+<div class="benefits-main-box">
+
+    <div class="benefits-box">
+
+            {% for benefit in section.blocks %}
+                <div class="benefits-subbox">
+                    {% if benefit.settings.icon != blank %}
+                        {{ benefit.settings.icon |  image_url: width: 54 |  image_tag }}
+                    {% endif %}
+                    
+                    <div class="benefits-text-box">
+                        <h3 class="benefits-subtitle">{{ benefit.settings.subtitle }}</h3>
+                        <p class="benefits-text">{{ benefit.settings.text }}</p>
+                    </div>
+                </div>
+            {% endfor %}
+
+    </div>
+
+</div>
+
+{% schema %}
+{
+    "name": "benefits",
+    "class": "benefits",
+    "tag": "section",
+    "settings": [
+        {
+            "type": "color_scheme",
+            "id": "color_scheme",
+            "label": "Color scheme",
+            "default": "schema-1"
+        },
+        {
+            "type": "range",
+            "id": "margin",
+            "label": "Margin bottom",
+            "max": 100,
+            "min": 0,
+            "step": 5,
+            "default": 0
+        },
+        {
+            "type": "text",
+            "id": "title",
+            "label": "Title",
+            "default": "Title"
+        },
+        {
+            "type": "range",
+            "id": "title_margin",
+            "label": "Title margin bottom",
+            "max": 100,
+            "min": 0,
+            "step": 5,
+            "default": 0
+        }
+        ],
+        "blocks": [
+            {
+                "name": "benefit",
+                "type": "benefit",
+                "limit": 4,
+                "settings": [
+                    {
+                        "type": "image_picker",
+                        "id": "icon",
+                        "label": "Icon"
+                    },
+                    {
+                        "type": "text",
+                        "id": "subtitle",
+                        "label": "Subtitle",
+                        "default": "Subtitle"
+                    },
+                    {
+                        "type": "text",
+                        "id": "text",
+                        "label": "Text",
+                        "default": "Text"
+                    }
+                ]
+            }
+        ],
+        "presets": [
+            {
+                "name": "Benefits"
+            }
+        ]
+}
+{% endschema %}

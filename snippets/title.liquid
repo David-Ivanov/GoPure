@@ -1,11 +1,11 @@
 {{ 'component-title.css' |  asset_url |  stylesheet_tag }}
 
 {% capture color %}
-    {% if section.settings.text_color == "secondary_color" %}
+    {% if section.settings.title_color == "secondary_color" %}
         {{ section.settings.color_scheme.settings.secondary_text }}
-    {% elsif section.settings.text_color == "main_color" %}
+    {% elsif section.settings.title_color == "main_color" %}
         {{ section.settings.color_scheme.settings.text }}
-    {% elsif section.settings.text_color == "accent_color" %}
+    {% elsif section.settings.title_color == "accent_color" %}
         {{ section.settings.color_scheme.settings.accent }}
 {% endif %}
 

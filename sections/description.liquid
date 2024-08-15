@@ -1,0 +1,77 @@
+{{ 'section-description.css' |  asset_url | stylesheet_tag }}
+
+{% style %}
+.description-main-box {
+    margin-bottom: {{ section.settings.margin }}px;
+}
+
+.description-main-box svg {
+    margin-bottom: {{ section.settings.icon_margin }}px;
+}
+
+.description-text {
+    color: {{ section.settings.color_scheme.settings.text }};
+}
+{% endstyle %}
+
+<div class="description-main-box">
+  {% render 'icon-capsule' %}
+
+<p class="description-text">
+    {{ section.settings.text }}
+</p>
+
+</div>
+
+
+{% schema %}
+{
+    "name": "description",
+    "tag": "section",
+    "settings": [
+         {
+            "type": "color_scheme",
+            "id": "color_scheme",
+            "label": "Color scheme",
+            "default": "schema-1"
+        },
+        {
+            "type": "range",
+            "id": "margin",
+            "label": "Margin bottom",
+            "max": 50,
+            "min": 0,
+            "step": 5,
+            "default": 0
+        },
+        {
+            "type": "header",
+            "content": "Icon"
+        },
+        {
+            "type": "range",
+            "id": "icon_margin",
+            "label": "Icon margin bottom",
+            "max": 50,
+            "min": 0,
+            "step": 5,
+            "default": 0
+        },
+        {
+            "type": "header",
+            "content": "Text"
+        },
+        {
+            "type": "text",
+            "id": "text",
+            "label": "Text",
+            "default": "Text"
+        }
+        ],
+        "presets": [
+            {
+                "name": "Description"
+            }
+        ]
+}
+{% endschema %}

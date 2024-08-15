@@ -6,7 +6,7 @@
         "color_scheme": "scheme-0233e1b2-39b6-4507-9398-54c83aec48ca",
         "bg_img": "shopify:\/\/shop_images\/tap_water_pitcher.png",
         "title": "The Power To Purify Tap Water, Everywhere.Title",
-        "title_color": "#004b83",
+        "title_color": "secondary_color",
         "title_uppercase": false,
         "title_margin": 15,
         "title_font_size": 56,
@@ -24,40 +24,40 @@
         "btn_margin": 0
       }
     },
-    "labels_Xek8qU": {
+    "labels_LqLfjF": {
       "type": "labels",
       "blocks": {
-        "lable_jcTXJz": {
+        "lable_UNLqHp": {
           "type": "lable",
           "settings": {
             "img": "shopify:\/\/shop_images\/image_34.png"
           }
         },
-        "lable_FDmyzL": {
+        "lable_NWExHa": {
           "type": "lable",
           "settings": {
             "img": "shopify:\/\/shop_images\/image_35_1.png"
           }
         },
-        "lable_AzqjPp": {
+        "lable_kipDe4": {
           "type": "lable",
           "settings": {
             "img": "shopify:\/\/shop_images\/image_36.png"
           }
         },
-        "lable_dgxrRa": {
+        "lable_pkL4Ta": {
           "type": "lable",
           "settings": {
             "img": "shopify:\/\/shop_images\/image_37.png"
           }
         },
-        "lable_Ng8RjJ": {
+        "lable_NKdNT8": {
           "type": "lable",
           "settings": {
             "img": "shopify:\/\/shop_images\/image_38.png"
           }
         },
-        "lable_b73zhy": {
+        "lable_ebicVc": {
           "type": "lable",
           "settings": {
             "img": "shopify:\/\/shop_images\/image_39.png"
@@ -65,12 +65,12 @@
         }
       },
       "block_order": [
-        "lable_jcTXJz",
-        "lable_FDmyzL",
-        "lable_AzqjPp",
-        "lable_dgxrRa",
-        "lable_Ng8RjJ",
-        "lable_b73zhy"
+        "lable_UNLqHp",
+        "lable_NWExHa",
+        "lable_kipDe4",
+        "lable_pkL4Ta",
+        "lable_NKdNT8",
+        "lable_ebicVc"
       ],
       "settings": {
         "color_scheme": "scheme-0233e1b2-39b6-4507-9398-54c83aec48ca",
@@ -108,7 +108,7 @@
   },
   "order": [
     "hero_aRYVmA",
-    "labels_Xek8qU",
+    "labels_LqLfjF",
     "featured_collection"
   ]
 }
