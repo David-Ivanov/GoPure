@@ -77,6 +77,64 @@
         "margin": 60
       }
     },
+    "description_n8CJCV": {
+      "type": "description",
+      "settings": {
+        "color_scheme": "scheme-0233e1b2-39b6-4507-9398-54c83aec48ca",
+        "margin": 40,
+        "icon_margin": 40,
+        "text": "GOpure goes where other water purifiers and filters can’t go. Every faucet, sink, spigot, hose, drinking fountain, in every neighborhood, town, city, and country. Every drop of water from every potable source is now safe to drink everywhere you go with your GOpure Pod."
+      }
+    },
+    "benefits_Ei9YiM": {
+      "type": "benefits",
+      "blocks": {
+        "benefit_346ppf": {
+          "type": "benefit",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/Rectangle.png",
+            "subtitle": "Earth Friendly",
+            "text": "GOpure Pod is completely natural and made of food-grade diatomaceous earth, nature's \"perfect filter\""
+          }
+        },
+        "benefit_ndQ6yk": {
+          "type": "benefit",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/Rectangle_b06fa5ae-7bcf-4382-b3b3-e1de1c5d203e.png",
+            "subtitle": "PuriBloc Technology",
+            "text": "GOpure's innovative purification process introduces a revolutionary advanced ceramic technology"
+          }
+        },
+        "benefit_eCG3rJ": {
+          "type": "benefit",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/Rectangle-1.png",
+            "subtitle": "Works in Any Сontainer",
+            "text": "The Pod is portable and adaptable, able to be dropped into any device, from water bottle to coffee maker"
+          }
+        },
+        "benefit_KtTPmT": {
+          "type": "benefit",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/Rectangle-2.png",
+            "subtitle": "Reduce Pollution",
+            "text": "Each Pod purifies 264 gallons of water, eliminating 2,000 disposable plastic water bottles"
+          }
+        }
+      },
+      "block_order": [
+        "benefit_346ppf",
+        "benefit_ndQ6yk",
+        "benefit_eCG3rJ",
+        "benefit_KtTPmT"
+      ],
+      "settings": {
+        "color_scheme": "scheme-0233e1b2-39b6-4507-9398-54c83aec48ca",
+        "margin": 70,
+        "title": "Where there’s a tap, there’s purified water",
+        "title_margin": 70
+      }
+    },
     "featured_collection": {
       "type": "featured-collection",
       "settings": {
@@ -109,6 +167,8 @@
   "order": [
     "hero_aRYVmA",
     "labels_LqLfjF",
+    "description_n8CJCV",
+    "benefits_Ei9YiM",
     "featured_collection"
   ]
 }

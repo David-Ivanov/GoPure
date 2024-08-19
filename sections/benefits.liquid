@@ -10,6 +10,7 @@
 
     }
     .benefits-main-box {
+        margin-bottom: {{ section.settings.main_box_margin }}px;
         background-color: {{ section.settings.color_scheme.settings.secondary_accent }};
         background-image: url("{{ 'benefits-bg.png' |  asset_img_url: 'master' }}");
     }
@@ -21,6 +22,12 @@
     .benefits-text {
         color: {{ section.settings.color_scheme.settings.secondary_text }};
     }
+
+    .benefits-btn-{{ section.id }} {
+        background-color: {{ section.settings.color_scheme.settings.button }};
+        color: {{ section.settings.color_scheme.settings.secondary_text }};
+
+    }
 {% endstyle %}
 
 <h2 class="benefits-title">{{ section.settings.title }}</h2>
@@ -30,21 +37,38 @@
     <div class="benefits-box">
 
             {% for benefit in section.blocks %}
-                <div class="benefits-subbox">
-                    {% if benefit.settings.icon != blank %}
-                        {{ benefit.settings.icon |  image_url: width: 54 |  image_tag }}
-                    {% endif %}
-                    
-                    <div class="benefits-text-box">
-                        <h3 class="benefits-subtitle">{{ benefit.settings.subtitle }}</h3>
-                        <p class="benefits-text">{{ benefit.settings.text }}</p>
+                {% if benefit.type == "benefit" %}
+
+                    <div class="benefits-subbox">
+                        {% if benefit.settings.icon != blank %}
+                            {{ benefit.settings.icon |  image_url: width: 54 |  image_tag }}
+                        {% endif %}
+                        
+                        <div class="benefits-text-box">
+                            <h3 class="benefits-subtitle">{{ benefit.settings.subtitle }}</h3>
+                            <p class="benefits-text">{{ benefit.settings.text }}</p>
+                        </div>
                     </div>
-                </div>
+
+                {% endif %}
             {% endfor %}
 
     </div>
 
 </div>
+
+{% for btn in section.blocks %}
+    {% if btn.type == "button" %}
+
+        <a class="main-btn benefits-btn benefits-btn-{{ section.id }}" href="{{ routes.all_products_collection_url  }}">
+            <p class="main-btn-text benefits-btn-text benefits-btn-text-{{ section.id }}">{{ btn.settings.btn_text }}</p>
+        
+            {% render 'icon-arrow' %}
+        </a>
+
+    {% endif %}      
+{% endfor %}
+
 
 {% schema %}
 {
@@ -81,6 +105,15 @@
             "min": 0,
             "step": 5,
             "default": 0
+        },
+        {
+            "type": "range",
+            "id": "main_box_margin",
+            "label": "Main box margin bottom",
+            "max": 100,
+            "min": 0,
+            "step": 5,
+            "default": 0
         }
         ],
         "blocks": [
@@ -105,6 +138,19 @@
                         "id": "text",
                         "label": "Text",
                         "default": "Text"
+                    }
+                ]
+            },
+            {
+                "name": "button",
+                "type": "button",
+                "limit": 1,
+                "settings": [
+                    {
+                        "type": "text",
+                        "id": "btn_text",
+                        "label": "Button text",
+                        "default": "Purchase Now"
                     }
                 ]
             }
