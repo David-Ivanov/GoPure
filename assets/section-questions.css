@@ -1,0 +1,90 @@
+.questions {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    width: 100%;
+}
+
+.questions-title {
+    font-size: 35px;
+    text-align: center;
+}
+
+.questions-main-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 120px;
+
+    width: 100%;
+    padding-bottom: 50px;
+    border-bottom: 1px solid #EAEAEA;
+}
+
+.questions-text-box {
+    width: 550px;
+}
+
+.question-answer-box {
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+    overflow: hidden;
+}
+
+.question-answer-box:not(:last-of-type) {
+    border-bottom: 1px solid #EAEAEA;
+}
+
+.question-box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    cursor: pointer;
+}
+
+.question-text {
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 1.46;
+}
+
+.answer-text {
+    height: 0;
+    overflow: hidden;
+}
+
+.question-checkbox:checked ~ .answer-text {
+    height: 100%;
+}
+
+/* benefits */
+
+.questions-benefits-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+
+    padding-top: 60px;
+}
+
+.questions-benefits-item-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+
+    width: 143px;
+}
+
+.questions-benefit-text {
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 1.46;
+    text-transform: uppercase;
+    text-align: center;
+}

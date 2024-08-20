@@ -120,19 +120,27 @@
             "subtitle": "Reduce Pollution",
             "text": "Each Pod purifies 264 gallons of water, eliminating 2,000 disposable plastic water bottles"
           }
+        },
+        "button_pWgAEi": {
+          "type": "button",
+          "settings": {
+            "btn_text": "Purchase Now"
+          }
         }
       },
       "block_order": [
         "benefit_346ppf",
         "benefit_ndQ6yk",
         "benefit_eCG3rJ",
-        "benefit_KtTPmT"
+        "benefit_KtTPmT",
+        "button_pWgAEi"
       ],
       "settings": {
         "color_scheme": "scheme-0233e1b2-39b6-4507-9398-54c83aec48ca",
         "margin": 70,
         "title": "Where there’s a tap, there’s purified water",
-        "title_margin": 70
+        "title_margin": 70,
+        "main_box_margin": 25
       }
     },
     "featured_collection": {

@@ -1,264 +1,234 @@
-{{ 'section-hero.css' |  asset_url |  stylesheet_tag }}
+{{ 'section-hero.css' | asset_url | stylesheet_tag }}
 
 {% style %}
-    .hero-main-box {
-        background-image: url("{{ section.settings.bg_img |  image_url: width: 1440 }}"); 
-    }
+  .hero-main-box {
+    background-image: url("{{ section.settings.bg_img | image_url: width: 1440 }}");
+  }
 {% endstyle %}
 
 <div class="hero-main-box">
-    <div class="hero-box">
-        {% render 'title' %}
-        {% render 'text' %}
-        {% render 'main-btn' %}
-    </div>
+  <div class="hero-box">
+    {% render 'title' %}
+    {% render 'text' %}
+    {% render 'main-btn' %}
+  </div>
 </div>
 
 {% schema %}
-{
+  {
     "name": "hero",
     "tag": "section",
     "settings": [
-        {
-            "type": "color_scheme",
-            "id": "color_scheme",
-            "label": "Color scheme",
-            "default": "schema-1"
-        },
-        {
-            "type": "image_picker",
-            "id": "bg_img",
-            "label": "Background image"
-        },
-        {
-            "type": "header",
-            "content": "Title"
-        },
-        {
-            "type": "text",
-            "id": "title",
-            "label": "Title",
-            "default": "Title"
-        },
-            {
-            "type": "select",
-            "id": "title_color",
-            "options": [
-                {
-                    "value": "secondary_color",
-                    "label": "Secondary color"
-                },
-                {
-                    "value": "main_color",
-                    "label": "Main color"
-                },
-                {
-                    "value": "accent_color",
-                    "label": "Accent color"
-                }
-            ],
-            "label": "Title color",
-            "default": "main_color"
-            },
-        {
-            "type": "checkbox",
-            "id": "title_uppercase",
-            "label": "Upper case",
-            "default": false
-        },
-        {
-            "type": "range",
-            "id": "title_margin",
-            "label": "Title margin bottom",
-            "max": 50,
-            "min": 0,
-            "step": 5,
-            "default": 0
-        },
-        {
-            "type": "range",
-            "id": "title_font_size",
-            "label": "Title font size",
-            "max": 100,
-            "min": 0,
-            "step": 1,
-            "default": 35
-        },
-        {
-            "type": "select",
-            "id": "title_h",
-            "label": "Title h",
-            "options": [
-                {
-                    "value": "h1",
-                    "label": "h1"
-                },
-                {
-                    "value": "h2",
-                    "label": "h2"
-                },
-                {
-                    "value": "h3",
-                    "label": "h3"
-                },
-                {
-                    "value": "h4",
-                    "label": "h4"
-                },
-                {
-                    "value": "h5",
-                    "label": "h5"
-                },
-                {
-                    "value": "h6",
-                    "label": "h6"
-                }
-            ],
-            "default": "h2"
-        },
-        {
-            "type": "header",
-            "content": "Text"
-        },
-        {
-            "type": "text",
-            "id": "text",
-            "label": "Text",
-            "default": "Text"
-        },
-        {
-            "type": "select",
-            "id": "text_color",
-            "options": [
-                {
-                    "value": "secondary_color",
-                    "label": "Secondary color"
-                },
-                {
-                    "value": "main_color",
-                    "label": "Main color"
-                },
-                {
-                    "value": "accent_color",
-                    "label": "Accent color"
-                }
-            ],
-            "label": "Text color",
-            "default": "main_color"
-        },
-        {
-            "type": "checkbox",
-            "id": "text_uppercase",
-            "label": "Upper case",
-            "default": false
-        },
-        {
-            "type": "range",
-            "id": "text_margin",
-            "label": "Text margin bottom",
-            "max": 50,
-            "min": 0,
-            "step": 5,
-            "default": 0
-        },
-        {
-            "type": "range",
-            "id": "text_font_size",
-            "label": "Text font size",
-            "max": 100,
-            "min": 0,
-            "step": 1,
-            "default": 24
-        },
-        {
-            "type": "select",
-            "id": "text_weight",
-            "label": "Text weight",
-            "options": [
-                {
-                    "value": "400",
-                    "label": "400"
-                },
-                {
-                    "value": "500",
-                    "label": "500"
-                },
-                {
-                    "value": "600",
-                    "label": "600"
-                },
-                {
-                    "value": "700",
-                    "label": "700"
-                }
-            ]
-        },
-        {
-            "type": "select",
-            "id": "text_align",
-            "label": "Text align",
-            "options": [
-                {
-                    "value": "start",
-                    "label": "Start"
-                },
-                {
-                    "value": "center",
-                    "label": "Center"
-                },
-                {
-                    "value": "end",
-                    "label": "End"
-                }
-            ],
-            "default": "start"
-        },
-        {
-            "type": "header",
-            "content": "Button"
-        },
-        {
-            "type": "text",
-            "id": "btn_text",
-            "label": "Button text",
-            "default": "Shop Now"
-        },
-        {
-            "type": "checkbox",
-            "id": "btn_arrow",
-            "label": "Button arrow",
-            "default": true
-        },
-        {
-            "type": "select",
-            "id": "btn_link",
-            "label": "Button link",
-            "options": [
-                {
-                    "value": "/collections/all",
-                    "label": "Shop"
-                },
-                {
-                    "value": "/pages/contact",
-                    "label": "Contact us"
-                }
-            ],
-            "default": "/collections/all"
-        },
-        {
-            "type": "range",
-            "id": "btn_margin",
-            "label": "Margin bottom",
-            "min": 0,
-            "max": 50,
-            "step": 5,
-            "default": 0
-        }
+      {
+        "type": "color_scheme",
+        "id": "color_scheme",
+        "label": "Color scheme",
+        "default": "schema-1"
+      },
+      {
+        "type": "image_picker",
+        "id": "bg_img",
+        "label": "Background image"
+      },
+      {
+        "type": "header",
+        "content": "Title"
+      },
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Title",
+        "default": "Title"
+      }, {
+        "type": "select",
+        "id": "title_color",
+        "options": [
+          {
+            "value": "secondary_color",
+            "label": "Secondary color"
+          }, {
+            "value": "main_color",
+            "label": "Main color"
+          }, {
+            "value": "accent_color",
+            "label": "Accent color"
+          }
         ],
-        "presets": [
-            {
-                "name": "Hero"
-            }
+        "label": "Title color",
+        "default": "main_color"
+      }, {
+        "type": "checkbox",
+        "id": "title_uppercase",
+        "label": "Upper case",
+        "default": false
+      }, {
+        "type": "range",
+        "id": "title_margin",
+        "label": "Title margin bottom",
+        "max": 50,
+        "min": 0,
+        "step": 5,
+        "default": 0
+      }, {
+        "type": "range",
+        "id": "title_font_size",
+        "label": "Title font size",
+        "max": 100,
+        "min": 0,
+        "step": 1,
+        "default": 35
+      }, {
+        "type": "select",
+        "id": "title_h",
+        "label": "Title h",
+        "options": [
+          {
+            "value": "h1",
+            "label": "h1"
+          },
+          {
+            "value": "h2",
+            "label": "h2"
+          },
+          {
+            "value": "h3",
+            "label": "h3"
+          },
+          {
+            "value": "h4",
+            "label": "h4"
+          }, {
+            "value": "h5",
+            "label": "h5"
+          }, {
+            "value": "h6",
+            "label": "h6"
+          }
+        ],
+        "default": "h2"
+      }, {
+        "type": "header",
+        "content": "Text"
+      }, {
+        "type": "text",
+        "id": "text",
+        "label": "Text",
+        "default": "Text"
+      }, {
+        "type": "select",
+        "id": "text_color",
+        "options": [
+          {
+            "value": "secondary_color",
+            "label": "Secondary color"
+          }, {
+            "value": "main_color",
+            "label": "Main color"
+          }, {
+            "value": "accent_color",
+            "label": "Accent color"
+          }
+        ],
+        "label": "Text color",
+        "default": "main_color"
+      }, {
+        "type": "checkbox",
+        "id": "text_uppercase",
+        "label": "Upper case",
+        "default": false
+      }, {
+        "type": "range",
+        "id": "text_margin",
+        "label": "Text margin bottom",
+        "max": 50,
+        "min": 0,
+        "step": 5,
+        "default": 0
+      }, {
+        "type": "range",
+        "id": "text_font_size",
+        "label": "Text font size",
+        "max": 100,
+        "min": 0,
+        "step": 1,
+        "default": 24
+      }, {
+        "type": "select",
+        "id": "text_weight",
+        "label": "Text weight",
+        "options": [
+          {
+            "value": "400",
+            "label": "400"
+          }, {
+            "value": "500",
+            "label": "500"
+          }, {
+            "value": "600",
+            "label": "600"
+          }, {
+            "value": "700",
+            "label": "700"
+          }
         ]
-}
+      }, {
+        "type": "select",
+        "id": "text_align",
+        "label": "Text align",
+        "options": [
+          {
+            "value": "start",
+            "label": "Start"
+          }, {
+            "value": "center",
+            "label": "Center"
+          }, {
+            "value": "end",
+            "label": "End"
+          }
+        ],
+        "default": "start"
+      }, {
+        "type": "header",
+        "content": "Button"
+      }, {
+        "type": "text",
+        "id": "btn_text",
+        "label": "Button text",
+        "default": "Shop Now"
+      }, {
+        "type": "checkbox",
+        "id": "btn_arrow",
+        "label": "Button arrow",
+        "default": true
+      }, {
+        "type": "select",
+        "id": "btn_link",
+        "label": "Button link",
+        "options": [
+          {
+            "value": "/collections/all",
+            "label": "Shop"
+          }, {
+            "value": "/pages/contact",
+            "label": "Contact us"
+          }
+        ],
+        "default": "/collections/all"
+      }, {
+        "type": "range",
+        "id": "btn_margin",
+        "label": "Margin bottom",
+        "min": 0,
+        "max": 50,
+        "step": 5,
+        "default": 0
+      }
+    ],
+    "presets": [
+      {
+        "name": "Hero"
+      }
+    ]
+  }
 {% endschema %}

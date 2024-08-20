@@ -1,0 +1,158 @@
+{{ 'section-questions.css' |  asset_url |  stylesheet_tag }}
+
+{% style %}
+  .questions {
+     margin-bottom: {{ section.settings.margin }}px;
+  }
+
+  .questions-title {
+    color: {{ section.settings.color_scheme.settings.accent }};
+    margin-bottom: {{ section.settings.title_margin }}px;
+  }
+
+  .question-text {
+    color: {{ section.settings.color_scheme.settings.accent }};
+  }
+
+  .questions-benefit-text {
+      color: {{ section.settings.color_scheme.settings.accent }};
+  }
+{% endstyle %}
+
+
+<h2 class="title questions-title">{{ section.settings.title }}</h2>
+
+<div class="questions-main-box">
+  {% if section.settings.img != blank %}
+    {{ section.settings.img | image_url: width: 250 | image_tag }}
+  {% endif %}
+
+  <div class="questions-text-box">
+    
+    {% for question in section.blocks %}
+      {% if  question.type == 'question' %}
+        
+        <div class="question-answer-box">
+
+          <input id="{{ question.id }}" class="question-checkbox visually-hidden" type="checkbox" name="quetion">
+          <label class="question-box" for="{{ question.id }}">
+
+            <h3 class="question-text">{{ question.settings.question }}</h3>
+            {% render 'icon-plus' %}
+
+            </label>
+            
+            <p class="answer-text">{{ question.settings.answer }}</p>
+
+        </div>
+
+      {% endif %}
+    {% endfor %}
+    
+  </div>
+</div>
+
+<div class="questions-benefits-box">
+      {% for benefit in section.blocks %}
+       {% if  benefit.type == 'benefits' %}        
+
+        <div class="questions-benefits-item-box">
+          {% if benefit.settings.img != blank %}
+            {{ benefit.settings.img |  image_url: width: 46 |  image_tag  }}
+          {% endif %}
+          <p class="questions-benefit-text">{{ benefit.settings.text }}</p>
+        </div>
+
+      {% endif %}
+    {% endfor %}
+</div>
+{% schema %}
+  {
+    "name": "questions",
+    "tag": "section",
+    "class": "questions",
+    "settings": [
+      {
+        "type": "color_scheme",
+        "id": "color_scheme",
+        "label": "Color scheme",
+        "default": "schema-1"
+      },
+      {
+        "type": "image_picker",
+        "id": "img",
+        "label": "Image"
+      },
+      {
+        "type": "range",
+        "id": "margin",
+        "label": "Margin bottom",
+        "max": 100,
+        "min": 0,
+        "step": 5,
+        "default": 0
+      },
+      {
+        "type": "header",
+        "content": "Title"
+      }, {
+        "type": "text",
+        "id": "title",
+        "label": "Title",
+        "default": "Title"
+      }, {
+        "type": "range",
+        "id": "title_margin",
+        "label": "Title margin bottom",
+        "max": 50,
+        "min": 0,
+        "step": 5,
+        "default": 0
+      }
+    ],
+    "blocks": [
+      {
+        "name": "Question",
+        "type": "question",
+        "limit": 7,
+        "settings": [
+          {
+            "type": "text",
+            "id": "question",
+            "label": "Question",
+            "default": "Question"
+          },
+          {
+            "type": "text",
+            "id": "answer",
+            "label": "Answer",
+            "default": "Answer"
+          }
+        ]
+      },
+      {
+        "name": "Benefits",
+        "type": "benefits",
+        "limit": 6,
+        "settings": [
+        {
+          "type": "image_picker",
+          "id": "img",
+          "label": "Image"
+       },
+      {
+          "type": "text",
+          "id": "text",
+          "label": "Text",
+          "default": "Text"
+      }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Questions"
+      }
+    ]
+  }
+{% endschema %}
