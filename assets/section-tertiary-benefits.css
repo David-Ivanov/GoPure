@@ -1,0 +1,37 @@
+.tertiary-benefits {
+    display: flex;
+    flex-direction: column;
+
+    width: 100%;
+}
+
+.tertiary-benefits-main-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 55px;
+
+    width: 100%;
+}
+
+.tertiary-benefits-title {
+    font-size: 35px;
+    font-weight: 700;
+}
+
+.tertiary-benefits-text-box {
+    margin-bottom: 45px;
+}
+
+.tertiary-benefits-text {
+    padding-top: 15px;
+    padding-bottom: 15px;
+
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 1.46;
+}
+
+.tertiary-benefits-text:not(:last-of-type) {
+    border-bottom: 1px solid #EAEAEA;
+}

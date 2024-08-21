@@ -261,6 +261,53 @@
         "title_margin": 50
       }
     },
+    "secondary_benefits_634XAg": {
+      "type": "secondary-benefits",
+      "blocks": {
+        "benefits_iT7Rnw": {
+          "type": "benefits",
+          "settings": {
+            "img": "shopify:\/\/shop_images\/Rectangle_c41056d4-59cc-4a51-99c0-6da38ab52403.png",
+            "text": "Increases Energy"
+          }
+        },
+        "benefits_dgg6mQ": {
+          "type": "benefits",
+          "settings": {
+            "img": "shopify:\/\/shop_images\/Rectangle_4ba3b4da-1905-4de1-85c2-c17c682840c1.png",
+            "text": "Supports Recovery"
+          }
+        },
+        "benefits_3iGqK3": {
+          "type": "benefits",
+          "settings": {
+            "img": "shopify:\/\/shop_images\/Rectangle_5bfc5062-e358-4836-ac6d-c86a990ec21a.png",
+            "text": "Improves Immunity"
+          }
+        },
+        "benefits_g8cm6z": {
+          "type": "benefits",
+          "settings": {
+            "img": "shopify:\/\/shop_images\/Rectangle_24096c1b-80b3-40e3-9a90-30075c3cbb15.png",
+            "text": "Helps with Digestion"
+          }
+        }
+      },
+      "block_order": [
+        "benefits_iT7Rnw",
+        "benefits_dgg6mQ",
+        "benefits_3iGqK3",
+        "benefits_g8cm6z"
+      ],
+      "settings": {
+        "color_scheme": "scheme-0233e1b2-39b6-4507-9398-54c83aec48ca",
+        "margin": 100,
+        "title": "Benefits of Daily Use",
+        "title_margin": 50,
+        "box_margin": 60,
+        "btn_text": "Get Your GOpure"
+      }
+    },
     "featured_collection": {
       "type": "featured-collection",
       "settings": {
@@ -296,6 +343,7 @@
     "description_n8CJCV",
     "benefits_Ei9YiM",
     "questions_z4iRbp",
+    "secondary_benefits_634XAg",
     "featured_collection"
   ]
 }
