@@ -143,6 +143,124 @@
         "main_box_margin": 25
       }
     },
+    "questions_z4iRbp": {
+      "type": "questions",
+      "blocks": {
+        "question_93pb9L": {
+          "type": "question",
+          "settings": {
+            "question": "What is inside the GOpure Pod?",
+            "answer": "Answer"
+          }
+        },
+        "question_aHDwMX": {
+          "type": "question",
+          "settings": {
+            "question": "How do I use my GOpure Pod?",
+            "answer": "Answer"
+          }
+        },
+        "question_nR6Uep": {
+          "type": "question",
+          "settings": {
+            "question": "How long does it take to purify my water?",
+            "answer": "Answer"
+          }
+        },
+        "question_C8ydTX": {
+          "type": "question",
+          "settings": {
+            "question": "How long will my GOpure Pod last?",
+            "answer": "Answer"
+          }
+        },
+        "question_V7ipAq": {
+          "type": "question",
+          "settings": {
+            "question": "Where is it safe to use my GOpure Pod?",
+            "answer": "Answer"
+          }
+        },
+        "question_jdDeFP": {
+          "type": "question",
+          "settings": {
+            "question": "How do I know when it’s time to get a new GOpure Pod?",
+            "answer": "Answer"
+          }
+        },
+        "question_R8wxYp": {
+          "type": "question",
+          "settings": {
+            "question": "What else can my Pod do?",
+            "answer": "Answer"
+          }
+        },
+        "benefits_wtnBUN": {
+          "type": "benefits",
+          "settings": {
+            "img": "shopify:\/\/shop_images\/Rectangle_69931c69-93c1-400d-b582-1587291638a6.png",
+            "text": "Eliminates Fluoride"
+          }
+        },
+        "benefits_aEbGxq": {
+          "type": "benefits",
+          "settings": {
+            "img": "shopify:\/\/shop_images\/Rectangle_3a0fa8f8-4313-4455-b4c5-47d69f8671d9.png",
+            "text": "Eliminates Lead"
+          }
+        },
+        "benefits_NjyYg8": {
+          "type": "benefits",
+          "settings": {
+            "img": "shopify:\/\/shop_images\/Rectangle_c82af0a2-3210-4a18-8334-50ae9197ff7e.png",
+            "text": "Eliminates Arsenic"
+          }
+        },
+        "benefits_Ubadgb": {
+          "type": "benefits",
+          "settings": {
+            "img": "shopify:\/\/shop_images\/Rectangle_86cbe2e1-fae4-461a-8d78-193a2ef9d4a1.png",
+            "text": "Eliminates PFOAs"
+          }
+        },
+        "benefits_xYnxKc": {
+          "type": "benefits",
+          "settings": {
+            "img": "shopify:\/\/shop_images\/Rectangle_19f383ae-7354-4b94-8e67-b12e28b853f0.png",
+            "text": "Eliminates Microplastics"
+          }
+        },
+        "benefits_FMigqz": {
+          "type": "benefits",
+          "settings": {
+            "img": "shopify:\/\/shop_images\/Rectangle_9dd3305e-075d-4682-ac59-39bdfddd9da2.png",
+            "text": "Eliminates Chlorine"
+          }
+        }
+      },
+      "block_order": [
+        "question_93pb9L",
+        "question_aHDwMX",
+        "question_nR6Uep",
+        "question_C8ydTX",
+        "question_V7ipAq",
+        "question_jdDeFP",
+        "question_R8wxYp",
+        "benefits_wtnBUN",
+        "benefits_aEbGxq",
+        "benefits_NjyYg8",
+        "benefits_Ubadgb",
+        "benefits_xYnxKc",
+        "benefits_FMigqz"
+      ],
+      "settings": {
+        "color_scheme": "scheme-0233e1b2-39b6-4507-9398-54c83aec48ca",
+        "img": "shopify:\/\/shop_images\/gopure-pod-water-filter-front-package_1200x1200_1.png",
+        "margin": 60,
+        "title": "Frequently Asked Questions",
+        "title_margin": 50
+      }
+    },
     "featured_collection": {
       "type": "featured-collection",
       "settings": {
@@ -177,6 +295,7 @@
     "labels_LqLfjF",
     "description_n8CJCV",
     "benefits_Ei9YiM",
+    "questions_z4iRbp",
     "featured_collection"
   ]
 }

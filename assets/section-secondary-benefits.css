@@ -1,0 +1,40 @@
+.secondary-benefits {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    width: 100%;
+
+    padding-top: 120px;
+    padding-bottom: 120px;
+}
+
+.secondary-benefits-title {
+    font-size: 35px;
+    text-align: center;
+    font-weight: 700;
+    line-height: 1.25;
+}
+
+.secondary-benefits-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 60px;
+}
+
+.secondary-benefits-item-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.secondary-benefits-text {
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 1.46;
+    text-transform: uppercase;
+    text-align: center;
+}
