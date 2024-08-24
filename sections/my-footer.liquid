@@ -1,0 +1,126 @@
+{{ 'component-list-social.css' |  asset_url |  stylesheet_tag }}
+{{ 'section-my-footer.css' |  asset_url |  stylesheet_tag }}
+
+{% style %}
+    .my-footer {
+        background-color: {{ section.settings.color_scheme.settings.accent }};
+    }
+
+    .my-footer-subscription-title {
+        color: {{ section.settings.color_scheme.settings.secondary_text }};
+    }
+
+    .my-footer-subscription-input {
+        background-color: {{ section.settings.color_scheme.settings.background }};
+    }
+
+   .my-footer-subscription-btn {
+        background-color: {{ section.settings.color_scheme.settings.secondary_accent }};
+        color: {{ section.settings.color_scheme.settings.secondary_text }};
+    }
+
+    .my-footer-copyright {
+        color: {{ section.settings.color_scheme.settings.secondary_text }};
+    }
+
+    .my-footer-slogan {
+        color: {{ section.settings.color_scheme.settings.secondary_text }};
+    }
+
+{% endstyle %}
+
+<div class="my-footer-top-box">
+    {% render 'icon-my-footer-logo' %}
+
+    <div class="my-footer-achievements-box">
+        {% for achievement in section.blocks %}
+            {% if achievement.settings.img != blank %}
+                
+                {{ achievement.settings.img |  image_url: height: 50 |  image_tag  }}
+                
+            {% endif %}
+        {% endfor %}
+    </div>
+</div>
+
+<div class="my-footer-middle-box">
+<form  class="my-footer-form" method="post" action="/contact#contact_form" accept-charset="UTF-8">
+        
+    <lable class="my-footer-subscription-title" for="my-footer-email">
+        {{ section.settings.subscription_title }}
+    </lable>
+
+    <div class="my-footer-input-box">
+        <input class="my-footer-subscription-input" name="contact[email]" id="my-footer-email" type="email" placeholder="Your email" >
+        <button class="my-footer-subscription-btn" type="submit">Join</button>
+    </div>
+
+    <input type="hidden" name="form_type" value="customer">
+    <input type="hidden" name="utf8" value="✓">
+
+</form>
+
+    {% render 'social-icons' %}
+</div>
+
+<div class="my-footer-bottom-box">
+    <p class="my-footer-copyright">{{ section.settings.copyright }}</p>
+
+    <div class="my-footer-slogan-box">
+        <p class="my-footer-slogan">{{ section.settings.slogan }}</p>
+        {% render 'icon-blob' %}
+    </div>
+</div>
+
+{% schema %}
+{
+    "name": "My footer",
+    "tag": "footer",
+    "class": "my-footer",
+    "settings": [
+        {
+            "type": "color_scheme",
+            "id": "color_scheme",
+            "label": "Color scheme",
+            "default": "schema-1"
+       },
+       {
+        "type": "text",
+        "id": "subscription_title",
+        "label": "Subscription title",
+        "default": "Join our Newsletter"
+      },
+      {
+        "type": "text",
+        "id": "copyright",
+        "label": "Copyright text",
+        "default": "Copyrights © 2021 All Rights Reserved by Bloc Enterprises"
+      },
+      {
+        "type": "text",
+        "id": "slogan",
+        "label": "Slogan text",
+        "default": "Drop In, Drink Up"
+      }
+        ],
+        "blocks": [
+            {
+                "name": "Achievements",
+                "type": "achievements",
+                "limit": 3,
+                "settings": [
+                    {
+                        "type": "image_picker",
+                        "id": "img",
+                        "label": "Achievement"
+                    }
+                ]
+            }
+        ],
+    "presets": [
+        {
+            "name": "My footer"
+        }
+    ]
+}
+{% endschema %}

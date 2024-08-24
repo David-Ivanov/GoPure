@@ -9,12 +9,6 @@
   %}
 {% endcomment %}
 
-{% style %}
-  .list-social__item {
-    color: {{ section.settings.color_scheme.settings.secondary_text }} !important;
-  }
-{% endstyle %}
-
 <ul class="list-unstyled list-social{% if class %} {{ class}}{% endif %}" role="list">
   {%- if settings.social_facebook_link != blank -%}
     <li class="list-social__item">

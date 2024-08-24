@@ -1,0 +1,108 @@
+.my-footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+}
+
+.my-footer-top-box,
+.my-footer-middle-box,
+.my-footer-bottom-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 100%;
+
+    padding-top: 30px;
+    padding-right: 165px;
+    padding-bottom: 30px;
+    padding-left: 165px;
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.17);
+}
+
+.my-footer-achievements-box {
+    display: flex;
+    gap: 35px;
+    align-items: center;
+}
+
+.my-footer-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.my-footer-subscription-title {
+    margin-left: 10px;
+    margin-bottom: 25px;
+    
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 1.46;
+    text-transform: uppercase;
+}
+
+.my-footer-subscription-title:focus {
+    outline: none;
+}
+
+.my-footer-input-box {
+    display: flex;
+}
+
+.my-footer-subscription-input {
+    width: 250px;
+    height: 50px;
+
+    padding-left: 24px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+
+    border: none;
+}
+
+.my-footer-subscription-input::placeholder {
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 1.46;
+
+    opacity: 0.6;
+}
+
+.my-footer-subscription-btn {
+    width: 80px;
+    height: 50px;
+
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1.75;
+
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+
+    border: none;
+}
+
+.my-footer-copyright {
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 1.46;
+}
+
+.my-footer-slogan-box {
+    display: flex;
+    align-items: end;
+    gap: 10px;
+}
+
+.my-footer-slogan {
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 1.46;
+}

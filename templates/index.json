@@ -335,6 +335,67 @@
         "padding_top": 44,
         "padding_bottom": 36
       }
+    },
+    "tertiary_benefits_TUBbVd": {
+      "type": "tertiary-benefits",
+      "blocks": {
+        "benefit_wxK3wy": {
+          "type": "benefit",
+          "settings": {
+            "text": "You want to support your nutritional needs every day"
+          }
+        },
+        "benefit_L8pBq8": {
+          "type": "benefit",
+          "settings": {
+            "text": "You want to encourage a healthy gut and nutrient absorption"
+          }
+        },
+        "benefit_dyP7Nq": {
+          "type": "benefit",
+          "settings": {
+            "text": "You travel frequently and struggle to eat well on the road"
+          }
+        },
+        "benefit_MReWBW": {
+          "type": "benefit",
+          "settings": {
+            "text": "You just don’t feel as energetic as you used to"
+          }
+        },
+        "benefit_jzUPNP": {
+          "type": "benefit",
+          "settings": {
+            "text": "You’re an athlete seeking enhanced performance"
+          }
+        }
+      },
+      "block_order": [
+        "benefit_wxK3wy",
+        "benefit_L8pBq8",
+        "benefit_dyP7Nq",
+        "benefit_MReWBW",
+        "benefit_jzUPNP"
+      ],
+      "settings": {
+        "color_scheme": "scheme-0233e1b2-39b6-4507-9398-54c83aec48ca",
+        "img": "shopify:\/\/shop_images\/image_2_09f4b550-41ea-4c80-af57-947695d6914e.png",
+        "margin": 100,
+        "title": "GOpure is perfect if…",
+        "title_margin": 50,
+        "btn_text": "Get Your GOpure"
+      }
+    },
+    "motivetion_36q7fk": {
+      "type": "motivetion",
+      "settings": {
+        "color_scheme": "scheme-0233e1b2-39b6-4507-9398-54c83aec48ca",
+        "bg": "shopify:\/\/shop_images\/text-and-img3_830x_1.png",
+        "title": "Join the Movement. Help save the world one sip at a time",
+        "text": "Every ocean, river, stream, landfill, forest, park, trail, mountain, and valley (and all the creatures that inhabit them). Because the power to save the environment from another 2,000 plastic water bottles comes in every Pod",
+        "mark": "@thegopurepod",
+        "btn_text": "Shop now"
+      }
     }
   },
   "order": [
@@ -344,6 +405,8 @@
     "benefits_Ei9YiM",
     "questions_z4iRbp",
     "secondary_benefits_634XAg",
-    "featured_collection"
+    "featured_collection",
+    "tertiary_benefits_TUBbVd",
+    "motivetion_36q7fk"
   ]
 }
