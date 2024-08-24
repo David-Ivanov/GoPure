@@ -1,25 +1,48 @@
+{{ 'section-motivation.css' |  asset_url |  stylesheet_tag }}
+
 {% style %}
-    .motivetion {
+    .motivation {
         background-image: url('{{ section.settings.bg |  image_url: width: 1440  }}');
+        margin-bottom: {{ section.settings.margin }}px;
     }
+    .motivation-title {
+        color: {{ section.settings.color_scheme.settings.secondary_text }};
+    }
+    .motivation-text {
+        color: {{ section.settings.color_scheme.settings.secondary_text }};
+    }
+
+    .main-btn-{{ section.id }} {
+        background-color: {{ section.settings.color_scheme.settings.button_label }};
+        color: {{ section.settings.color_scheme.settings.button }};
+  }
+
+  .motivation-mark {
+        color: {{ section.settings.color_scheme.settings.secondary_text }};
+  }
 {% endstyle %}
 
-<div class="motivation-box">
-    {% render 'icon-trees' %}
+<div class="motivation-bg-box">
+    <div class="motivation-main-box">
 
-    <h2 class="motivation-title">{{ section.settings.title }}</h2>
+        <div class="motivation-box">
+            {% render 'icon-trees' %}
 
-    <p class="motivation-text">{{ section.settings.text }}</p>
+            <h2 class="motivation-title">{{ section.settings.title }}</h2>
 
-    <a class="motivation-btn main-btn main-btn-{{ section.id }}" href="{{ routes.all_products_collection_url }}">
-        <p class="motivation-btn-text main-btn-text">{{ section.settings.btn_text }}</p>
-        {% render 'icon-arrow' %}
-    </a>
+            <p class="motivation-text">{{ section.settings.text }}</p>
+
+            <a class="motivation-btn main-btn main-btn-{{ section.id }}" href="{{ routes.all_products_collection_url }}">
+                <p class="motivation-btn-text main-btn-text">{{ section.settings.btn_text }}</p>
+            </a>
+        </div>
+
+        <p class="motivation-mark">{{ section.settings.mark }}</p>
+
+        {% render 'social-icons', class: 'motivation-icons' %}
+
+    </div>
 </div>
-
-<p class="motivation-mark">{{ section.settings.mark }}</p>
-
-{% render 'social-icons' %}
 
 {% schema %}
 {
@@ -37,6 +60,15 @@
         "type": "image_picker",
         "id": "bg",
         "label": "Background image"
+      },
+      {
+        "type": "range",
+        "id": "margin",
+        "label": "Margin bottom",
+        "max": 100,
+        "min": 0,
+        "step": 5,
+        "default": 0
       },
       {
         "type": "text",
