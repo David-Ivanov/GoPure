@@ -4,7 +4,34 @@
   "sections": {
     "my-footer": {
       "type": "my-footer",
+      "blocks": {
+        "achievements_FNHiyf": {
+          "type": "achievements",
+          "settings": {
+            "img": "shopify:\/\/shop_images\/Rectangle_8ef23b30-9cc6-476e-a1f7-b7d6a8337c80.png"
+          }
+        },
+        "achievements_eQqjWx": {
+          "type": "achievements",
+          "settings": {
+            "img": "shopify:\/\/shop_images\/Rectangle_1.png"
+          }
+        },
+        "achievements_KnRcnK": {
+          "type": "achievements",
+          "settings": {
+            "img": "shopify:\/\/shop_images\/Rectangle_2.png"
+          }
+        }
+      },
+      "block_order": [
+        "achievements_FNHiyf",
+        "achievements_eQqjWx",
+        "achievements_KnRcnK"
+      ],
       "settings": {
+        "color_scheme": "scheme-0233e1b2-39b6-4507-9398-54c83aec48ca",
+        "subscription_title": "Join our Newsletter"
       }
     }
   },

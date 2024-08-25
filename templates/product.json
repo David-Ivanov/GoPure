@@ -3,15 +3,25 @@
     "main": {
       "type": "main-product",
       "blocks": {
-        "vendor": {
-          "type": "text",
-          "settings": {
-            "text": "{{ product.vendor }}",
-            "text_style": "uppercase"
-          }
-        },
         "title": {
           "type": "title",
+          "settings": {
+          }
+        },
+        "rating_Er4Mbh": {
+          "type": "rating",
+          "settings": {
+          }
+        },
+        "text_aW9iD8": {
+          "type": "text",
+          "settings": {
+            "text": "Purify tap water, everywhere.",
+            "text_style": "subtitle"
+          }
+        },
+        "description": {
+          "type": "description",
           "settings": {
           }
         },
@@ -27,43 +37,26 @@
             "swatch_shape": "circle"
           }
         },
-        "quantity_selector": {
-          "type": "quantity_selector",
-          "settings": {
-          }
-        },
         "buy_buttons": {
           "type": "buy_buttons",
           "settings": {
-            "show_dynamic_checkout": true,
+            "show_dynamic_checkout": false,
             "show_gift_card_recipient": true
-          }
-        },
-        "description": {
-          "type": "description",
-          "settings": {
-          }
-        },
-        "share": {
-          "type": "share",
-          "settings": {
-            "share_label": "Share"
           }
         }
       },
       "block_order": [
-        "vendor",
         "title",
+        "rating_Er4Mbh",
+        "text_aW9iD8",
+        "description",
         "price",
         "variant_picker",
-        "quantity_selector",
-        "buy_buttons",
-        "description",
-        "share"
+        "buy_buttons"
       ],
       "settings": {
         "enable_sticky_info": true,
-        "color_scheme": "scheme-1",
+        "color_scheme": "scheme-0233e1b2-39b6-4507-9398-54c83aec48ca",
         "media_size": "large",
         "constrain_to_viewport": true,
         "media_fit": "contain",
@@ -75,6 +68,65 @@
         "enable_video_looping": false,
         "padding_top": 36,
         "padding_bottom": 12
+      }
+    },
+    "description_EKpj4d": {
+      "type": "description",
+      "settings": {
+        "color_scheme": "scheme-0233e1b2-39b6-4507-9398-54c83aec48ca",
+        "margin": 40,
+        "icon_margin": 40,
+        "text": "GOpure goes where other water purifiers and filters can’t go. Every faucet, sink, spigot, hose, drinking fountain, in every neighborhood, town, city, and country. Every drop of water from every potable source is now safe to drink everywhere you go with your GOpure Pod."
+      }
+    },
+    "benefits_gx4Hqc": {
+      "type": "benefits",
+      "blocks": {
+        "benefit_Q4pm94": {
+          "type": "benefit",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/Rectangle.png",
+            "subtitle": "Earth Friendly",
+            "text": "GOpure Pod is completely natural and made of food-grade diatomaceous earth, nature's \"perfect filter\""
+          }
+        },
+        "benefit_8XVbky": {
+          "type": "benefit",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/Rectangle_b06fa5ae-7bcf-4382-b3b3-e1de1c5d203e.png",
+            "subtitle": "PuriBloc Technology",
+            "text": "GOpure's innovative purification process introduces a revolutionary advanced ceramic technology"
+          }
+        },
+        "benefit_dYiw84": {
+          "type": "benefit",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/Rectangle-1.png",
+            "subtitle": "Works in Any Сontainer",
+            "text": "The Pod is portable and adaptable, able to be dropped into any device, from water bottle to coffee maker"
+          }
+        },
+        "benefit_bbHFCj": {
+          "type": "benefit",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/Rectangle-2.png",
+            "subtitle": "Reduce Pollution",
+            "text": "Each Pod purifies 264 gallons of water, eliminating 2,000 disposable plastic water bottles"
+          }
+        }
+      },
+      "block_order": [
+        "benefit_Q4pm94",
+        "benefit_8XVbky",
+        "benefit_dYiw84",
+        "benefit_bbHFCj"
+      ],
+      "settings": {
+        "color_scheme": "scheme-0233e1b2-39b6-4507-9398-54c83aec48ca",
+        "margin": 100,
+        "title": "Where there’s a tap, there’s purified water",
+        "title_margin": 60,
+        "main_box_margin": 40
       }
     },
     "related-products": {
@@ -94,10 +146,131 @@
         "padding_top": 36,
         "padding_bottom": 28
       }
+    },
+    "questions_J3dHGK": {
+      "type": "questions",
+      "blocks": {
+        "question_Tq9knL": {
+          "type": "question",
+          "settings": {
+            "question": "What is inside the GOpure Pod?",
+            "answer": "Answer"
+          }
+        },
+        "question_amwyEV": {
+          "type": "question",
+          "settings": {
+            "question": "How do I use my GOpure Pod?",
+            "answer": "Answer"
+          }
+        },
+        "question_bnrBLJ": {
+          "type": "question",
+          "settings": {
+            "question": "How long does it take to purify my water?",
+            "answer": "Answer"
+          }
+        },
+        "question_QBLw6y": {
+          "type": "question",
+          "settings": {
+            "question": "How long will my GOpure Pod last?",
+            "answer": "Answer"
+          }
+        },
+        "question_pTCnKJ": {
+          "type": "question",
+          "settings": {
+            "question": "Where is it safe to use my GOpure Pod?",
+            "answer": "Answer"
+          }
+        },
+        "question_dK3VNn": {
+          "type": "question",
+          "settings": {
+            "question": "How do I know when it’s time to get a new GOpure Pod?",
+            "answer": "Answer"
+          }
+        },
+        "question_JgpYdp": {
+          "type": "question",
+          "settings": {
+            "question": "What else can my Pod do?",
+            "answer": "Answer"
+          }
+        },
+        "benefits_m6Di6D": {
+          "type": "benefits",
+          "settings": {
+            "img": "shopify:\/\/shop_images\/Rectangle_69931c69-93c1-400d-b582-1587291638a6.png",
+            "text": "Eliminates Fluoride"
+          }
+        },
+        "benefits_UkyVty": {
+          "type": "benefits",
+          "settings": {
+            "img": "shopify:\/\/shop_images\/Rectangle_3a0fa8f8-4313-4455-b4c5-47d69f8671d9.png",
+            "text": "Eliminates Lead"
+          }
+        },
+        "benefits_KyhfLe": {
+          "type": "benefits",
+          "settings": {
+            "img": "shopify:\/\/shop_images\/Rectangle_c82af0a2-3210-4a18-8334-50ae9197ff7e.png",
+            "text": "Eliminates Arsenic"
+          }
+        },
+        "benefits_UzRBmB": {
+          "type": "benefits",
+          "settings": {
+            "img": "shopify:\/\/shop_images\/Rectangle_86cbe2e1-fae4-461a-8d78-193a2ef9d4a1.png",
+            "text": "Eliminates PFOAs"
+          }
+        },
+        "benefits_8zEdUL": {
+          "type": "benefits",
+          "settings": {
+            "img": "shopify:\/\/shop_images\/Rectangle_19f383ae-7354-4b94-8e67-b12e28b853f0.png",
+            "text": "Eliminates Microplastics"
+          }
+        },
+        "benefits_apKpNq": {
+          "type": "benefits",
+          "settings": {
+            "img": "shopify:\/\/shop_images\/Rectangle_9dd3305e-075d-4682-ac59-39bdfddd9da2.png",
+            "text": "Eliminates Chlorine"
+          }
+        }
+      },
+      "block_order": [
+        "question_Tq9knL",
+        "question_amwyEV",
+        "question_bnrBLJ",
+        "question_QBLw6y",
+        "question_pTCnKJ",
+        "question_dK3VNn",
+        "question_JgpYdp",
+        "benefits_m6Di6D",
+        "benefits_UkyVty",
+        "benefits_KyhfLe",
+        "benefits_UzRBmB",
+        "benefits_8zEdUL",
+        "benefits_apKpNq"
+      ],
+      "settings": {
+        "color_scheme": "scheme-0233e1b2-39b6-4507-9398-54c83aec48ca",
+        "img": "shopify:\/\/shop_images\/gopure-pod-water-filter-front-package_1200x1200_1.png",
+        "margin": 100,
+        "title": "Frequently Asked Questions",
+        "title_margin": 70
+      }
     }
   },
   "order": [
     "main",
-    "related-products"
+    "description_EKpj4d",
+    "benefits_gx4Hqc",
+    "related-products",
+    "questions_J3dHGK"
   ]
 }
