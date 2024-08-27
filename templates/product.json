@@ -25,16 +25,16 @@
           "settings": {
           }
         },
-        "price": {
-          "type": "price",
-          "settings": {
-          }
-        },
         "variant_picker": {
           "type": "variant_picker",
           "settings": {
-            "picker_type": "button",
+            "picker_type": "custom",
             "swatch_shape": "circle"
+          }
+        },
+        "price": {
+          "type": "price",
+          "settings": {
           }
         },
         "buy_buttons": {
@@ -50,8 +50,8 @@
         "rating_Er4Mbh",
         "text_aW9iD8",
         "description",
-        "price",
         "variant_picker",
+        "price",
         "buy_buttons"
       ],
       "settings": {
@@ -67,7 +67,7 @@
         "hide_variants": true,
         "enable_video_looping": false,
         "padding_top": 36,
-        "padding_bottom": 12
+        "padding_bottom": 100
       }
     },
     "description_EKpj4d": {
@@ -127,24 +127,6 @@
         "title": "Where there’s a tap, there’s purified water",
         "title_margin": 60,
         "main_box_margin": 40
-      }
-    },
-    "related-products": {
-      "type": "related-products",
-      "settings": {
-        "heading": "You may also like",
-        "heading_size": "h2",
-        "products_to_show": 4,
-        "columns_desktop": 4,
-        "color_scheme": "scheme-1",
-        "image_ratio": "square",
-        "image_shape": "default",
-        "show_secondary_image": true,
-        "show_vendor": false,
-        "show_rating": false,
-        "columns_mobile": "2",
-        "padding_top": 36,
-        "padding_bottom": 28
       }
     },
     "questions_J3dHGK": {
@@ -264,13 +246,48 @@
         "title": "Frequently Asked Questions",
         "title_margin": 70
       }
+    },
+    "related-products": {
+      "type": "related-products",
+      "settings": {
+        "heading": "You may also like",
+        "heading_size": "h2",
+        "products_to_show": 4,
+        "columns_desktop": 4,
+        "color_scheme": "scheme-1",
+        "image_ratio": "square",
+        "image_shape": "default",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "columns_mobile": "2",
+        "padding_top": 36,
+        "padding_bottom": 28
+      }
+    },
+    "1724580519f4914140": {
+      "type": "apps",
+      "blocks": {
+        "trustoo_io_reviews_review_widget_BGMhTr": {
+          "type": "shopify:\/\/apps\/trustoo-io-reviews\/blocks\/review-widget\/c8f15077-6475-4e86-ad06-b66038d5ba2c",
+          "settings": {
+          }
+        }
+      },
+      "block_order": [
+        "trustoo_io_reviews_review_widget_BGMhTr"
+      ],
+      "settings": {
+        "include_margins": true
+      }
     }
   },
   "order": [
     "main",
     "description_EKpj4d",
     "benefits_gx4Hqc",
+    "questions_J3dHGK",
     "related-products",
-    "questions_J3dHGK"
+    "1724580519f4914140"
   ]
 }

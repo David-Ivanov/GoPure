@@ -1,0 +1,170 @@
+{{ 'my-cart.css' |  asset_url | stylesheet_tag }}
+
+{% style %}
+    .my-cart-header {
+        background-color: {{ section.settings.color_scheme.settings.secondary_background }};
+    }
+
+    .my-cart-title {
+        color: {{ section.settings.color_scheme.settings.button }};
+    }
+
+    .my-cart-close-btn svg {
+        stroke: {{ section.settings.color_scheme.settings.button }};
+    }
+
+    .my-cart-body {
+         background-color: {{ section.settings.color_scheme.settings.background }};
+    }
+    
+    .my-cart-body-empty {
+        background-color: {{ section.settings.color_scheme.settings.background }};
+    }
+    .my-cart-text-empty {
+        color: {{ section.settings.color_scheme.settings.accent }};
+    }
+
+    .my-cart-item-title {
+        color: {{ section.settings.color_scheme.settings.accent }};
+    }
+
+    .my-cart-item-variant {
+        color: {{ section.settings.color_scheme.settings.text }};
+    }
+
+    .my-cart-item-quantity-btn svg {
+        stroke: {{ section.settings.color_scheme.settings.accent }};
+    }
+
+    .my-cart-item-quantity {
+        color: {{ section.settings.color_scheme.settings.accent }};
+    }
+
+    .my-cart-item-btn-delete {
+        border-color: {{ section.settings.color_scheme.settings.accent }};
+    }
+
+    .my-cart-item-btn-delete svg {
+        stroke: {{ section.settings.color_scheme.settings.accent }};
+    }
+
+    .my-cart-item-total-price {
+        color: {{ section.settings.color_scheme.settings.accent }};
+    }
+
+    .my-cart-footer {
+        background-color: {{ section.settings.color_scheme.settings.secondary_background }};
+    }
+
+    .my-cart-footer-title {
+        color: {{ section.settings.color_scheme.settings.accent }};
+    }
+
+    .my-cart-footer-total-price {
+        color: {{ section.settings.color_scheme.settings.accent }};
+    }
+
+    .my-cart-footer-btn {
+        background-color: {{ section.settings.color_scheme.settings.button }};
+        color: {{ section.settings.color_scheme.settings.secondary_text }};
+    }
+
+{% endstyle %}
+
+
+<script src="{{  "my-cart.js" | asset_url }}" defer="defer"></script>
+
+<div class="my-cart-backdrop" onclick="closeModalCart()">
+    <div class="my-cart">
+
+        <div class="my-cart-header">
+            <p class="my-cart-title">Shopping Cart</p>
+
+            <button class="my-cart-close-btn" onclick="closeModalCart()" type="button">{% render 'icon-close' %}</button>
+        </div>
+
+        <form class="my-cart-form" id="cart" action="/cart" method="post">
+
+            {% if cart == empty %}
+                <div class="my-cart-body-empty">
+                    <p class="my-cart-text-empty">Your cart empty</p>
+                </div>
+            {% else %}
+                
+                <ul class="my-cart-body">
+                    {% for item in cart.items %}
+                        <li class="my-cart-item my-cart-item-{{ item.variant_id }}">
+                            {{ item.image |  image_url: width: 100 |  image_tag  }}
+
+                            <div class="my-cart-item-first-box">
+
+                                    <h3 class="my-cart-item-title">{{ item.title }}</h3>
+                                    <p class="my-cart-item-variant">{{ item.variant.option1 }}</p>
+
+                                    <div class="my-cart-item-quantity-box">
+                                        <button class="my-cart-item-quantity-btn" onclick="updateQuantity(-1, {{ item.variant_id }})">{% render 'icon-minus' %}</button>
+                                        <input type="number" class="my-cart-item-quantity my-cart-item-quantity-{{ item.variant_id }}" value="{{ item.quantity }}" min="1" readonly>
+                                        <button class="my-cart-item-quantity-btn" onclick="updateQuantity(1, {{ item.variant_id }})"> {% render 'icon-plus' %}</button>
+                                    </div>
+                                    
+                            </div>
+
+                            <div class="my-cart-item-second-box">
+                                <button class="my-cart-item-btn-delete" onclick="removeItem({{ item.variant_id }})">{% render 'icon-close' %}</button>
+
+                                <p class="my-cart-item-total-price my-cart-item-total-price-{{ item.variant_id }}">{{ item.final_line_price | money }}</p>
+                            </div>
+                        </li>
+                    {% endfor %}
+                </ul>
+
+            {% endif %}
+
+
+            <div class="my-cart-footer">
+                <div class="my-cart-footer-box">
+                    <p class="my-cart-footer-title">Subtotal</p>
+                    <p class="my-cart-footer-total-price">{{ cart.total_price | money }}</p>
+                </div>
+
+                <button 
+                class="my-cart-footer-btn"
+                type="submit" 
+                name="checkout" 
+                form="cart"
+                {% if cart == empty %}
+                    disabled
+                {% endif %}>
+                Checkout
+                {% render 'icon-arrow' %}
+                </button>
+            </div>
+        </form>
+
+    </div>
+</div>
+
+<script>
+
+    document.querySelector('.my-cart').addEventListener('click', function(event) {
+    event.stopPropagation();
+        });
+
+        const quantityBtns = document.querySelectorAll('.my-cart-item-quantity-btn');
+        if (quantityBtns) {
+            quantityBtns.forEach(button => {
+        button.addEventListener('click', function(event) {
+            event.preventDefault();
+                })});
+        }
+
+
+    const deleteBtns = document.querySelectorAll('.my-cart-item-btn-delete');
+    if (deleteBtns) {
+        deleteBtns.forEach(button => {
+            button.addEventListener('click', function(event) {
+            event.preventDefault();
+                })});
+    }
+
+</script>

@@ -155,3 +155,37 @@
     <script src="{{ 'pickup-availability.js' | asset_url }}" defer="defer"></script>
   {%- endif -%}
 </div>
+
+
+<script>
+  if ('{{ settings.cart_type }}' === 'my-cart') {
+
+    const addToCartBtn = document.querySelector('.add-btn-custom');
+
+    if (addToCartBtn) {
+      addToCartBtn.addEventListener('click', function(event) {
+        event.preventDefault();
+      });
+    }
+  
+
+  const form = document.querySelector('form[action$="/cart/add"]');
+  const formData = new FormData(form);
+
+  addToCartBtn.addEventListener('click', async () => {
+    await fetch(window.Shopify.routes.root + 'cart/add.js', {
+      method: 'POST',
+      body: formData
+    })
+    .then(response => {
+      return response.json();
+    })
+    .catch((error) => {
+      console.error('Error:', error);
+    });
+
+    location.reload();
+  })
+  
+}
+</script>
