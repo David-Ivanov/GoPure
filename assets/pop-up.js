@@ -106,7 +106,7 @@ function innerCartItem({id, image, title, options_with_values, quantity, final_l
                 <p class="my-cart-item-variant">${options_with_values[0].name}</p>
 
                 <div class="my-cart-item-quantity-box">
-                    <button class="my-cart-item-quantity-btn" onclick="updateQuantity(-1, ${id})">
+                    <button class="my-cart-item-quantity-btn" onclick="event.preventDefault(); updateQuantity(-1, ${id})">
                         
                         <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" class="icon icon-minus" fill="none" viewBox="0 0 10 2">
                         <path fill-rule="evenodd" clip-rule="evenodd" d="M.5 1C.5.7.7.5 1 .5h8a.5.5 0 110 1H1A.5.5 0 01.5 1z" fill="currentColor">
@@ -114,7 +114,7 @@ function innerCartItem({id, image, title, options_with_values, quantity, final_l
 
                     </button>
                     <input type="number" class="my-cart-item-quantity my-cart-item-quantity-${id}" value="${quantity}" min="1" readonly>
-                    <button class="my-cart-item-quantity-btn" onclick="updateQuantity(1, ${id})">
+                    <button class="my-cart-item-quantity-btn" onclick="event.preventDefault(); updateQuantity(1, ${id})">
                     
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
                         <path d="M12 5V19" stroke="{{ section.settings.color_scheme.settings.accent }}" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -127,7 +127,7 @@ function innerCartItem({id, image, title, options_with_values, quantity, final_l
         </div>
 
         <div class="my-cart-item-second-box">
-            <button class="my-cart-item-btn-delete" onclick="removeItem(${id})">
+            <button class="my-cart-item-btn-delete" onclick="event.preventDefault(); removeItem(${id})">
             
                 <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" class="icon icon-close" fill="none" viewBox="0 0 18 17">
                 <path d="M.865 15.978a.5.5 0 00.707.707l7.433-7.431 7.579 7.282a.501.501 0 00.846-.37.5.5 0 00-.153-.351L9.712 8.546l7.417-7.416a.5.5 0 10-.707-.708L8.991 7.853 1.413.573a.5.5 0 10-.693.72l7.563 7.268-7.418 7.417z" fill="currentColor">

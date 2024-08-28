@@ -83,7 +83,7 @@
             <button class="my-cart-close-btn" onclick="closeModalCart()" type="button">{% render 'icon-close' %}</button>
         </div>
 
-
+        <form class="my-cart-form" id="cart" action="/cart" method="post">
             {% if cart == empty %}
                 <div class="my-cart-body-empty my-cart-body">
                     <p class="my-cart-text-empty">Your cart empty</p>
@@ -138,7 +138,7 @@
                 {% render 'icon-arrow' %}
                 </button>
             </div>
-
+        </form> 
     </div>
 </div>
 
