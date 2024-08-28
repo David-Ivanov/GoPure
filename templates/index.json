@@ -5,7 +5,7 @@
       "settings": {
         "color_scheme": "scheme-0233e1b2-39b6-4507-9398-54c83aec48ca",
         "bg_img": "shopify:\/\/shop_images\/tap_water_pitcher.png",
-        "title": "The Power To Purify Tap Water, Everywhere.Title",
+        "title": "The Power To Purify Tap Water, Everywhere.",
         "title_color": "secondary_color",
         "title_uppercase": false,
         "title_margin": 15,
@@ -363,10 +363,43 @@
       "settings": {
         "color_scheme": "scheme-0233e1b2-39b6-4507-9398-54c83aec48ca",
         "bg": "shopify:\/\/shop_images\/text-and-img3_830x_1.png",
+        "margin": 0,
         "title": "Join the Movement. Help save the world one sip at a time",
         "text": "Every ocean, river, stream, landfill, forest, park, trail, mountain, and valley (and all the creatures that inhabit them). Because the power to save the environment from another 2,000 plastic water bottles comes in every Pod",
         "mark": "@thegopurepod",
         "btn_text": "Shop now"
+      }
+    },
+    "pop_up_JajqB8": {
+      "type": "pop-up",
+      "blocks": {
+        "product_JJmTme": {
+          "type": "product",
+          "settings": {
+            "product": "gopure-pod-water-purifier-1",
+            "sku": "POD-HUMAN-S"
+          }
+        },
+        "product_emJK7T": {
+          "type": "product",
+          "settings": {
+            "product": "gopure-pod-water-purifier",
+            "sku": "POD-PET-S"
+          }
+        }
+      },
+      "block_order": [
+        "product_JJmTme",
+        "product_emJK7T"
+      ],
+      "settings": {
+        "color_scheme": "scheme-0233e1b2-39b6-4507-9398-54c83aec48ca",
+        "is_enable": true,
+        "img": "shopify:\/\/shop_images\/Rectangle_90a33e4a-4feb-4d9f-a53f-2341af334b7f.png",
+        "subheading": "Get Your GOpure",
+        "heading": "To be healthier and happier",
+        "delay": 10,
+        "once": true
       }
     }
   },
@@ -378,6 +411,7 @@
     "questions_z4iRbp",
     "secondary_benefits_634XAg",
     "tertiary_benefits_TUBbVd",
-    "motivetion_36q7fk"
+    "motivetion_36q7fk",
+    "pop_up_JajqB8"
   ]
 }

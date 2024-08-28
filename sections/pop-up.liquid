@@ -115,8 +115,7 @@ POD-PET-F
         "type": "checkbox",
         "id": "is_enable",
         "label": "Enable/disable",
-        "default": true,
-        "required": true
+        "default": true
       },
       {
         "type": "image_picker",
@@ -139,14 +138,13 @@ POD-PET-F
         "type": "number",
         "id": "delay",
         "label": "Show delay",
-        "default": 5,
-        "required": true
+        "default": 5
       },
       {
         "type": "checkbox",
         "id": "once",
         "label": "Show only once per customer",
-        "default": true
+        "default": false
       }
         ],
         "blocks": [
@@ -158,14 +156,12 @@ POD-PET-F
                     {
                         "type": "product",
                         "id": "product",
-                        "label": "Product",
-                        "required": true
+                        "label": "Product"
                     },
                     {
                         "type": "text",
                         "id": "sku",
-                        "label": "Variant SKU",
-                        "required": true
+                        "label": "Variant SKU"
                     }
                 ]
             }
