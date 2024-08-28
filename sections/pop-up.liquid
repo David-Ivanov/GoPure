@@ -1,0 +1,179 @@
+{% comment %} 
+SKUs:  
+POD-HUMAN-S
+POD-HUMAN-T
+POD-HUMAN-F
+POD-PET-S
+POD-PET-F
+{% endcomment %}
+
+{{ 'pop-up.css' |  asset_url |  stylesheet_tag }}
+
+<script src="{{ 'pop-up.js' |  asset_url }}" defer></script>
+
+{% style %}
+    .pop-up {
+        background-color: {{ section.settings.color_scheme.settings.background }};
+    }
+    
+    .pop-up-subheading {
+        color: {{ section.settings.color_scheme.settings.secondary_accent }};
+    }
+
+    .pop-up-heading {
+        color: {{ section.settings.color_scheme.settings.accent }};
+    }
+
+    .pop-up-product-title {
+        color: {{ section.settings.color_scheme.settings.accent }};
+    }
+
+    .pop-up-product-sku {
+        color: {{ section.settings.color_scheme.settings.text }};
+    }
+
+    .pop-up-product-price {
+        color: {{ section.settings.color_scheme.settings.secondary_accent }};
+    }
+
+    .pop-up-product-compare {
+        color: {{ section.settings.color_scheme.settings.text }};
+    }
+
+    .pop-up-btn-add {
+        color: {{ section.settings.color_scheme.settings.accent }};
+        border-color: {{ section.settings.color_scheme.settings.accent }};
+    }
+
+{% endstyle %}
+
+{% if section.settings.is_enable %}
+    <div class="pop-up-backdrop">
+        <div class="pop-up" 
+        data-delay="{{ section.settings.delay }}" 
+        data-once="{{ section.settings.once }}">
+
+        {% if section.settings.img != blank %}
+            {{ section.settings.img |  image_url: height: 500 |  image_tag  }}
+        {% endif %}
+
+        <div class="pop-up-box">
+            <p class="pop-up-subheading">{{ section.settings.subheading }}</p>
+            <h3 class="pop-up-heading">{{ section.settings.heading }}</h3>
+
+            <div class="pop-up-products">
+                {% for item in section.blocks %}
+                    {% for product in item.settings.product.variants %}
+                        {% if product.sku == item.settings.sku %}
+                
+                            <div class="pop-up-product" data-id="{{ product.id }}">
+                                {% if product.featured_image != blank %}
+                                    {{ product.featured_image  |  image_url: width: 100 |  image_tag }}
+                                {% endif %}
+                                    
+                                <div class="pop-up-product-box">
+                                        
+                                    <div class="pop-up-product-text-box">
+                                        <p class="pop-up-product-sku">SKU: {{ product.sku |  strip_html }}</p>
+                                        <p class="pop-up-product-title">{{ product.title }}</p>
+                                    </div>
+                                    
+                                    <div class="pop-up-product-price-box">
+                                        <p class="pop-up-product-price">{{ product.price |  money }}</p>
+                                        {% if  product.compare_at_price != blank %}
+                                            <p class="pop-up-product-compare">{{ product.compare_at_price | money }}</p>
+                                        {% endif %}
+                                    </div>
+
+                                </div>
+                            </div>
+
+                        {% endif %}
+                    {% endfor %}
+                {% endfor %}
+            </div>
+
+            <button class="pop-up-btn-add" type="button">Add to cart all {% render 'icon-cart' %}</button>
+        </div>
+
+        </div>
+    </div>
+{% endif %}
+
+{% schema %}
+{
+    "name": "Pop up",
+    "tag": "div",
+    "settings": [
+       {
+        "type": "color_scheme",
+        "id": "color_scheme",
+        "label": "Color scheme",
+        "default": "schema-1"
+      },
+      {
+        "type": "checkbox",
+        "id": "is_enable",
+        "label": "Enable/disable",
+        "default": true,
+        "required": true
+      },
+      {
+        "type": "image_picker",
+        "id": "img",
+        "label": "Image"
+      },
+      {
+        "type": "text",
+        "id": "subheading",
+        "label": "Subheading",
+        "default": "Get Your GOpure"
+      },
+      {
+        "type": "text",
+        "id": "heading",
+        "label": "Heading",
+        "default": "To be healthier and happier"
+      },
+      {
+        "type": "number",
+        "id": "delay",
+        "label": "Show delay",
+        "default": 5,
+        "required": true
+      },
+      {
+        "type": "checkbox",
+        "id": "once",
+        "label": "Show only once per customer",
+        "default": true
+      }
+        ],
+        "blocks": [
+            {
+                "name": "Product",
+                "type": "product",
+                "limit": 2,
+                "settings": [
+                    {
+                        "type": "product",
+                        "id": "product",
+                        "label": "Product",
+                        "required": true
+                    },
+                    {
+                        "type": "text",
+                        "id": "sku",
+                        "label": "Variant SKU",
+                        "required": true
+                    }
+                ]
+            }
+        ],
+        "presets": [
+            {
+                "name": "Pop up"
+            }
+        ]
+}
+{% endschema %}

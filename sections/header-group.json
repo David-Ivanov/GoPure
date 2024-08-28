@@ -2,13 +2,6 @@
   "name": "t:sections.header.name",
   "type": "header",
   "sections": {
-    "top_bar_WRBLzA": {
-      "type": "top-bar",
-      "settings": {
-        "color_scheme": "scheme-0233e1b2-39b6-4507-9398-54c83aec48ca",
-        "text": "Free Shipping on Orders Over $60"
-      }
-    },
     "header": {
       "type": "header",
       "settings": {
@@ -30,7 +23,6 @@
     }
   },
   "order": [
-    "top_bar_WRBLzA",
     "header"
   ]
 }
