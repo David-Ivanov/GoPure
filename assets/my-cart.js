@@ -45,11 +45,11 @@ function removeItem(variantId) {
     fetch('/cart/change.js', {
         method: 'POST',
         headers: {
-                    'Content-Type': 'application/json'
+            'Content-Type': 'application/json'
         },
         body: JSON.stringify({
-                id: String(variantId),
-                quantity: 0
+            id: String(variantId),
+            quantity: 0
         })
     })
         .then(res => res.json())
@@ -58,7 +58,7 @@ function removeItem(variantId) {
             // change total price
             totalPrice.textContent = `₴${data.total_price / 100}.00`;
         })
-        .catch(err => console.error(err))
+        .catch(err => console.error(err));
 }
 
 function openModalCart() {
@@ -78,3 +78,4 @@ function closeModalCart() {
     cart.style.display = 'none';
     cart.style.pointerEvents = 'none'
 }
+

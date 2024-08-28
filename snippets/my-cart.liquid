@@ -1,4 +1,4 @@
-{{ 'my-cart.css' |  asset_url | stylesheet_tag }}
+{{ 'component-my-cart.css' |  asset_url | stylesheet_tag }}
 
 {% style %}
     .my-cart-header {
@@ -72,7 +72,7 @@
 {% endstyle %}
 
 
-<script src="{{  "my-cart.js" | asset_url }}" defer="defer"></script>
+<script type="module" src="{{  "my-cart.js" | asset_url }}" defer></script>
 
 <div class="my-cart-backdrop" onclick="closeModalCart()">
     <div class="my-cart">
@@ -83,10 +83,9 @@
             <button class="my-cart-close-btn" onclick="closeModalCart()" type="button">{% render 'icon-close' %}</button>
         </div>
 
-        <form class="my-cart-form" id="cart" action="/cart" method="post">
 
             {% if cart == empty %}
-                <div class="my-cart-body-empty">
+                <div class="my-cart-body-empty my-cart-body">
                     <p class="my-cart-text-empty">Your cart empty</p>
                 </div>
             {% else %}
@@ -139,7 +138,6 @@
                 {% render 'icon-arrow' %}
                 </button>
             </div>
-        </form>
 
     </div>
 </div>
